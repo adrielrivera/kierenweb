@@ -10,7 +10,8 @@
         body { 
             font-family: 'Inter', sans-serif;
             scroll-behavior: smooth;
-            background: linear-gradient(135deg, #f0f4f8 0%, #e2e8f0 100%);
+            background: linear-gradient(135deg, #1a1c2a 0%, #2d2b3d 100%);
+            color: #e2e8f0;
         }
         .fade-in {
             opacity: 0;
@@ -36,10 +37,10 @@
         }
         .hover-scale:hover {
             transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         }
         .gradient-bg {
-            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #60a5fa 100%);
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #9333ea 100%);
             position: relative;
             overflow: hidden;
         }
@@ -50,7 +51,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.2) 0%, transparent 70%);
+            background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.15) 0%, transparent 70%);
             animation: pulse 6s ease-in-out infinite;
         }
         @keyframes pulse {
@@ -62,27 +63,27 @@
             width: 200px;
             height: 200px;
             border-radius: 50%;
-            background: linear-gradient(145deg, #f3f4f6, #e5e7eb);
-            border: 4px solid rgba(255, 255, 255, 0.9);
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(145deg, #2d2b3d, #1a1c2a);
+            border: 4px solid rgba(99, 102, 241, 0.4);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
             backdrop-filter: blur(12px);
             transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .photo-placeholder:hover {
             transform: translateY(-8px) rotate(5deg);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            border-color: rgba(255, 255, 255, 1);
+            box-shadow: 0 20px 60px rgba(99, 102, 241, 0.4);
+            border-color: rgba(99, 102, 241, 0.8);
         }
         .glass-card {
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(30, 32, 47, 0.6);
             backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.4);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .glass-card:hover {
-            background: rgba(255, 255, 255, 0.95);
-            border-color: rgba(255, 255, 255, 0.6);
+            background: rgba(30, 32, 47, 0.8);
+            border-color: rgba(99, 102, 241, 0.4);
         }
         .slide-in-left {
             opacity: 0;
@@ -113,7 +114,7 @@
         }
     </style>
 </head>
-<body class="bg-gray-50">
+<body>
     <!-- Header/Hero Section -->
     <header class="gradient-bg text-white py-24 relative overflow-hidden">
         <div class="container mx-auto px-4 flex items-center justify-between relative z-10">
@@ -126,49 +127,49 @@
     </header>
 
     <!-- Robotics Achievements Section -->
-    <section class="py-16 bg-white">
+    <section class="py-16">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold mb-8 fade-in">Robotics Achievements</h2>
+            <h2 class="text-3xl font-bold mb-8 fade-in text-indigo-300">Robotics Achievements</h2>
             <div class="grid md:grid-cols-2 gap-8 mb-12">
                 <div class="glass-card p-6 rounded-lg hover-scale fade-in" style="animation-delay: 0.2s">
-                    <h3 class="text-xl font-semibold mb-3">World Robot Olympiad</h3>
-                    <p class="text-gray-600 mb-2">Future Engineers - 1st Place (2024)</p>
-                    <p class="text-gray-600">Role: Builder</p>
+                    <h3 class="text-xl font-semibold mb-3 text-indigo-200">World Robot Olympiad</h3>
+                    <p class="text-gray-300 mb-2">Future Engineers - 1st Place (2024)</p>
+                    <p class="text-gray-400">Role: Builder</p>
                 </div>
                 <div class="glass-card p-6 rounded-lg hover-scale fade-in" style="animation-delay: 0.3s">
-                    <h3 class="text-xl font-semibold mb-3">SingVex</h3>
-                    <p class="text-gray-600 mb-2">Skills - 3rd Place (2023)</p>
-                    <p class="text-gray-600">Role: Builder</p>
+                    <h3 class="text-xl font-semibold mb-3 text-indigo-200">SingVex</h3>
+                    <p class="text-gray-300 mb-2">Skills - 3rd Place (2023)</p>
+                    <p class="text-gray-400">Role: Builder</p>
                 </div>
             </div>
 
             <div class="grid md:grid-cols-3 gap-6">
                 <div class="glass-card p-6 rounded-lg hover-scale fade-in" style="animation-delay: 0.4s">
-                    <h3 class="text-lg font-semibold mb-2">IDE</h3>
-                    <p class="text-gray-600">Role: Coder/Builder</p>
+                    <h3 class="text-lg font-semibold mb-2 text-indigo-200">IDE</h3>
+                    <p class="text-gray-400">Role: Coder/Builder</p>
                 </div>
                 <div class="glass-card p-6 rounded-lg hover-scale fade-in" style="animation-delay: 0.5s">
-                    <h3 class="text-lg font-semibold mb-2">First Lego League</h3>
-                    <p class="text-gray-600">Role: Coder/Builder</p>
+                    <h3 class="text-lg font-semibold mb-2 text-indigo-200">First Lego League</h3>
+                    <p class="text-gray-400">Role: Coder/Builder</p>
                 </div>
                 <div class="glass-card p-6 rounded-lg hover-scale fade-in" style="animation-delay: 0.6s">
-                    <h3 class="text-lg font-semibold mb-2">RoboRave Australia</h3>
-                    <p class="text-gray-600">Role: Coder/Builder</p>
+                    <h3 class="text-lg font-semibold mb-2 text-indigo-200">RoboRave Australia</h3>
+                    <p class="text-gray-400">Role: Coder/Builder</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Sports Achievements Section -->
-    <section class="py-16 bg-gray-50">
+    <section class="py-16 bg-opacity-10 bg-indigo-900">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold mb-8 fade-in">Sports Achievements</h2>
+            <h2 class="text-3xl font-bold mb-8 fade-in text-indigo-300">Sports Achievements</h2>
             
             <!-- Bouldering Achievements -->
             <div class="mb-8 fade-in" style="animation-delay: 0.2s">
-                <h3 class="text-2xl font-semibold mb-6">Bouldering</h3>
+                <h3 class="text-2xl font-semibold mb-6 text-indigo-200">Bouldering</h3>
                 <div class="glass-card p-6 rounded-lg hover-scale">
-                    <ul class="text-gray-600 space-y-2">
+                    <ul class="text-gray-300 space-y-2">
                         <li>SMU Gravical - Participant (2025)</li>
                         <li>Inter School Boulder League - Participant (2025)</li>
                     </ul>
@@ -177,18 +178,18 @@
 
             <!-- Other Sports -->
             <div class="fade-in" style="animation-delay: 0.3s">
-                <h3 class="text-2xl font-semibold mb-6">Other Sports</h3>
+                <h3 class="text-2xl font-semibold mb-6 text-indigo-200">Other Sports</h3>
                 <div class="grid md:grid-cols-2 gap-6">
                     <div class="glass-card p-6 rounded-lg hover-scale">
-                        <h4 class="text-lg font-semibold mb-2">Track & Field</h4>
-                        <ul class="text-gray-600 space-y-2">
+                        <h4 class="text-lg font-semibold mb-2 text-indigo-200">Track & Field</h4>
+                        <ul class="text-gray-300 space-y-2">
                             <li>400m - 2nd Place (2019)</li>
                             <li>Cheerleading Competition - 5th Place (2019)</li>
                         </ul>
                     </div>
                     <div class="glass-card p-6 rounded-lg hover-scale">
-                        <h4 class="text-lg font-semibold mb-2">Team Sports</h4>
-                        <ul class="text-gray-600 space-y-2">
+                        <h4 class="text-lg font-semibold mb-2 text-indigo-200">Team Sports</h4>
+                        <ul class="text-gray-300 space-y-2">
                             <li>Inter House Games Handball - 1st Place (2020)</li>
                         </ul>
                     </div>
@@ -198,18 +199,18 @@
     </section>
 
     <!-- Other Achievements Section -->
-    <section class="py-16 bg-white">
+    <section class="py-16">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold mb-8 fade-in">Other Achievements</h2>
+            <h2 class="text-3xl font-bold mb-8 fade-in text-indigo-300">Other Achievements</h2>
             
             <!-- Leadership -->
             <div class="mb-8 fade-in" style="animation-delay: 0.2s">
                 <div class="glass-card p-6 rounded-lg hover-scale">
-                    <h3 class="text-xl font-semibold mb-3">Blue House Class Representative</h3>
-                    <p class="text-gray-600 mb-2">2023-2024</p>
+                    <h3 class="text-xl font-semibold mb-3 text-indigo-200">Blue House Class Representative</h3>
+                    <p class="text-gray-300 mb-2">2023-2024</p>
                     <div class="mt-4">
-                        <h4 class="font-medium mb-2">Responsibilities:</h4>
-                        <ul class="list-disc list-inside text-gray-600 space-y-1">
+                        <h4 class="font-medium mb-2 text-indigo-100">Responsibilities:</h4>
+                        <ul class="list-disc list-inside text-gray-300 space-y-1">
                             <li>Class representation and coordination</li>
                             <li>Student leadership initiatives</li>
                             <li>Event organization and management</li>
@@ -221,18 +222,18 @@
             <!-- Art Achievement -->
             <div class="fade-in" style="animation-delay: 0.3s">
                 <div class="glass-card p-6 rounded-lg hover-scale">
-                    <h3 class="text-xl font-semibold mb-3">Inter House Installation-Art Challenge</h3>
-                    <p class="text-gray-600 mb-2">1st Place (2023)</p>
-                    <p class="text-gray-600">Teacher-in-charge: Ms Pat Ng</p>
+                    <h3 class="text-xl font-semibold mb-3 text-indigo-200">Inter House Installation-Art Challenge</h3>
+                    <p class="text-gray-300 mb-2">1st Place (2023)</p>
+                    <p class="text-gray-400">Teacher-in-charge: Ms Pat Ng</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8 mt-16">
+    <footer class="bg-opacity-30 bg-black text-white py-8 mt-16">
         <div class="container mx-auto px-4 text-center fade-in">
-            <p>© 2024 Kieren Sim. All rights reserved.</p>
+            <p class="text-gray-400">© 2024 Kieren Sim. All rights reserved.</p>
         </div>
     </footer>
 <script>
