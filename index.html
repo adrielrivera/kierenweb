@@ -21,6 +21,15 @@
             from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
         }
+        .fade-out {
+            opacity: 0;
+            transform: translateY(-30px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+        .visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
         .hover-scale {
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             transform: translateY(0);
@@ -30,7 +39,7 @@
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
         }
         .gradient-bg {
-            background: linear-gradient(135deg, #2563eb 0%, #3b82f6 50%, #60a5fa 100%);
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #60a5fa 100%);
             position: relative;
             overflow: hidden;
         }
@@ -226,5 +235,41 @@
             <p>© 2024 Kieren Sim. All rights reserved.</p>
         </div>
     </footer>
+<script>
+    // Intersection Observer for scroll animations
+    const observerOptions = {
+        root: null,
+        threshold: 0.1,
+        rootMargin: '0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                entry.target.classList.remove('fade-out');
+            } else {
+                entry.target.classList.add('fade-out');
+                entry.target.classList.remove('visible');
+            }
+        });
+    }, observerOptions);
+
+    // Observe all sections and cards
+    document.addEventListener('DOMContentLoaded', () => {
+        const sections = document.querySelectorAll('section');
+        const cards = document.querySelectorAll('.glass-card');
+        
+        sections.forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'transform');
+            observer.observe(section);
+        });
+
+        cards.forEach(card => {
+            card.classList.add('transition-all', 'duration-700', 'opacity-0', 'transform');
+            observer.observe(card);
+        });
+    });
+</script>
 </body>
 </html>
