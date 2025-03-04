@@ -16,6 +16,9 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    concurrency:
+      group: "pages"
+      cancel-in-progress: false
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -26,7 +29,8 @@ jobs:
       - name: Build
         run: |
           mkdir -p _site
-          cp -r index.html _site/
+          cp -r * _site/
+          rm -rf _site/.git _site/.github
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
